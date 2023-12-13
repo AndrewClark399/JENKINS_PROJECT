@@ -7,11 +7,11 @@ public class SeleniumTests {
     private String DRIVER_PATH = "C:\\Program Files\\edgedriver\\msedgedriver.exe";
     private String BASE_URL = "http://localhost:3000";
     public static void main(String[] args) {
-        System.setProperty("webdriver.edge.driver", this.DRIVER_PATH);
+        System.setProperty("webdriver.edge.driver", SeleniumTests.DRIVER_PATH);
         WebDriver driver = new EdgeDriver();
         String expectedTitle = "React App";
         String actualTitle = "";
-        driver.get(this.BASE_URL);
+        driver.get(SeleniumTests.BASE_URL);
         actualTitle = driver.getTitle();
         if (actualTitle.contentEquals(expectedTitle)){
             System.out.println("TEST PASSED!");
