@@ -28,8 +28,9 @@ pipeline {
         stage('Selenium Test') {
             steps {
                 dir('front') {
-                  bat 'npm install my-app-0.1.0.tgz'
-                  bat 'npm start my-app'
+                  bat 'npm run build'
+                  bat 'npm install -g serve'
+                  bat 'serve -s build'
                 }
                 withMaven(maven: 'M3') {
                   bat '''
