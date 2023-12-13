@@ -29,7 +29,7 @@ pipeline {
             steps {
                 dir('front') {
                   bat 'npm run build'
-                  bat 'xcopy /i build c:\\reactApp'
+                  bat 'xcopy /y /i build c:\\reactApp'
                 }
                 // bat 'appcmd add site /name:myapp /id:2 /physicalPath:c:\\reactApp /bindings:http/*:3000:'
                 withMaven(maven: 'M3') {
