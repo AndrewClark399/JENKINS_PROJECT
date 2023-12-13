@@ -15,7 +15,7 @@
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-edge-driver</artifactId>
+            <artifactId>selenium-chrome-driver</artifactId>
             <version>4.16.1</version>
         </dependency>
     </dependencies>
