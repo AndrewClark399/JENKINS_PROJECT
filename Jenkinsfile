@@ -29,9 +29,9 @@ pipeline {
             steps {
                 dir('front') {
                   bat 'npm run build'
-                  bat 'copy build c:reactApp'
+                  bat 'copy build c:\\reactApp'
                 }
-                bat 'appcmd add site /name:myapp /id:2 /physicalPath:c:\reactApp /bindings:http/*:3000:'
+                bat 'appcmd add site /name:myapp /id:2 /physicalPath:c:\\reactApp /bindings:http/*:3000:'
                 withMaven(maven: 'M3') {
                   bat '''
                   mvn clean install
