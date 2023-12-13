@@ -29,7 +29,6 @@ pipeline {
             steps {
                 dir('front') {
                   bat 'npm run build'
-                  bat 'npm install -g serve'
                   bat 'serve -s build'
                 }
                 withMaven(maven: 'M3') {
