@@ -1,17 +1,17 @@
 package com.qa.selenium;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.By;
 
 public class SeleniumTests {
-    private static String DRIVER_PATH = "C:\\Program Files\\edgedriver\\msedgedriver.exe";
+    private static String DRIVER_PATH = "C:\\Program Files\\chromedriver\\chromedriver.exe";
     private static String BASE_URL = "http://localhost:3000";
     public static void main(String[] args) {
-        System.setProperty("webdriver.edge.driver", SeleniumTests.DRIVER_PATH);
-        EdgeOptions options = new EdgeOptions();
+        System.setProperty("webdriver.chrome.driver", SeleniumTests.DRIVER_PATH);
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver(options);
         String expectedTitle = "React App";
         String actualTitle = "";
         driver.get(SeleniumTests.BASE_URL);
