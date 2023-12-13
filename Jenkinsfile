@@ -35,7 +35,7 @@ pipeline {
                 withMaven(maven: 'M3') {
                   bat 'mvn clean install'
                 }
-                bat 'java -cp target/selenium-1.0-SNAPSHOT.jar SeleniumTests'
+                bat 'java -cp target/selenium-1.0-SNAPSHOT.jar com.qa.selenium.SeleniumTests'
             }
         }
     }
