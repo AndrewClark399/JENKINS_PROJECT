@@ -1,7 +1,7 @@
 package com.qa.selenium;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.By;
+import org.seleniumhq.selenium.WebDriver;
+import org.seleniumhq.selenium.edge.EdgeDriver;
+import org.seleniumhq.selenium.By;
 
 public class SeleniumTests {
     private String DRIVER_PATH = "C:\\Program Files\\edgedriver\\msedgedriver.exe";
