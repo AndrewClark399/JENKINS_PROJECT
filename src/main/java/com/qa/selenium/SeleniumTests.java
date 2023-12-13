@@ -5,11 +5,11 @@ import org.openqa.selenium.By;
 
 public class SeleniumTests {
     private String DRIVER_PATH = "C:\Program Files\edgedriver\msedgedriver.exe";
-    private String BASE_URL = "http://localhost:3000/home";
+    private String BASE_URL = "http://localhost:3000";
     public static void main(String[] args) {
         System.setProperty("webdriver.edge.driver", this.DRIVER_PATH);
         WebDriver driver = new EdgeDriver();
-        String expectedTitle = "ToDo List - Home";
+        String expectedTitle = "React App";
         String actualTitle = "";
         driver.get(this.BASE_URL);
         actualTitle = driver.getTitle();
