@@ -21,6 +21,6 @@ public class SeleniumTests {
         } else {
             System.out.println("TEST FAILED");
         }
-        driver.close();
+        driver.quit();
     }
 }
