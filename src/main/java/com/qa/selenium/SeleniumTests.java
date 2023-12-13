@@ -4,7 +4,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.By;
 
 public class SeleniumTests {
-    private String DRIVER_PATH = "C:\Program Files\edgedriver\msedgedriver.exe";
+    private String DRIVER_PATH = "C:\\Program Files\\edgedriver\\msedgedriver.exe";
     private String BASE_URL = "http://localhost:3000";
     public static void main(String[] args) {
         System.setProperty("webdriver.edge.driver", this.DRIVER_PATH);
