@@ -29,7 +29,7 @@ pipeline {
             steps {
                 dir('front') {
                   bat 'npm run build'
-                  bat 'npx serve -s build'
+                  bat 'copy build C:\reactApp'
                 }
                 withMaven(maven: 'M3') {
                   bat '''
