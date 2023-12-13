@@ -1,6 +1,7 @@
 package com.qa.selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.By;
 
 public class SeleniumTests {
@@ -8,6 +9,8 @@ public class SeleniumTests {
     private static String BASE_URL = "http://localhost:3000";
     public static void main(String[] args) {
         System.setProperty("webdriver.edge.driver", SeleniumTests.DRIVER_PATH);
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("headless");
         WebDriver driver = new EdgeDriver();
         String expectedTitle = "React App";
         String actualTitle = "";
