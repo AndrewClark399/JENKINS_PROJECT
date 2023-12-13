@@ -29,7 +29,7 @@ pipeline {
             steps {
                 dir('front') {
                   bat 'npm run build'
-                  bat 'serve -s build'
+                  bat 'npx serve -s build'
                 }
                 withMaven(maven: 'M3') {
                   bat '''
