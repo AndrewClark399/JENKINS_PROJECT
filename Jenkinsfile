@@ -8,7 +8,7 @@ pipeline {
                 
                 bat "npm install"
                 // bat "npm test"
-                bat "npm package"
+                bat "npm pack"
               }
             }
         }
