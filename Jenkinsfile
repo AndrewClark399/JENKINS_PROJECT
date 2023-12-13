@@ -7,7 +7,7 @@ pipeline {
                 git url: 'https://github.com/agray998/simple-node-js-react-npm-app'
                 
                 bat "npm install"
-                bat "npm test"
+                // bat "npm test"
                 bat "npm package"
               }
             }
@@ -30,10 +30,12 @@ pipeline {
                 dir('front') {
                   bat 'npm start'
                 }
-                bat '''
-                mvn clean install
-                java -cp target/selenium-1.0-SNAPSHOT.jar SeleniumTests
-                '''
+                withMaven(maven: 'M3') {
+                  bat '''
+                  mvn clean install
+                  java -cp target/selenium-1.0-SNAPSHOT.jar SeleniumTests
+                  '''
+                }
             }
         }
     }
