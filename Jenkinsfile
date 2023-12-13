@@ -33,11 +33,9 @@ pipeline {
                 }
                 // bat 'appcmd add site /name:myapp /id:2 /physicalPath:c:\\reactApp /bindings:http/*:3000:'
                 withMaven(maven: 'M3') {
-                  bat '''
-                  mvn clean install
-                  java -cp target/selenium-1.0-SNAPSHOT.jar SeleniumTests
-                  '''
+                  bat 'mvn clean install'
                 }
+                bat 'java -cp target/selenium-1.0-SNAPSHOT.jar SeleniumTests'
             }
         }
     }
