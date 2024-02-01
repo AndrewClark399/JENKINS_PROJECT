@@ -1,5 +1,5 @@
-# LBG-SOFTWARE-JENKINS
-Reference solution for Jenkins CI Project
+# LBG-SOFTWARE-PROJECT4
+Reference solution for project 4, covering testing with selenium
 
 ## Requirements
 * Java 17 JDK
